@@ -1,0 +1,12 @@
+- hosts: localhost
+  roles: 
+  -  aws_ec2
+  -  aws_webserver_instances
+- hosts: tag_name_Webserver
+  roles: 
+  -  webserver_aws
+- hosts: tag_name_LoadBalancer
+  roles: 
+  -  loadbalancer  
+
+        
